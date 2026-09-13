@@ -25,7 +25,7 @@ namespace GamingForumAPI
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

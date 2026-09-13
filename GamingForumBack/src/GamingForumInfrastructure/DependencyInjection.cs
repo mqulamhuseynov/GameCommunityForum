@@ -1,4 +1,4 @@
-﻿using GamingForumDomain.Entities.Entities;
+﻿using GamingForumDomain.Entities.Identity;
 using GamingForumInfrastructure.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

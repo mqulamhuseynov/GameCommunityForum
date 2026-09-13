@@ -19,7 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GamingForumApplication\GamingForumApplication.csproj" />
     <ProjectReference Include="..\GamingForumDomain\GamingForumDomain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Implementations\" />
   </ItemGroup>
 
 </Project>

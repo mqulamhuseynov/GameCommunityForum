@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GamingForumInfrastructure\GamingForumInfrastructure.csproj" />
+    <Folder Include="IRepos\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
