@@ -3,8 +3,8 @@
     <Project Path="Presentation/GamingForumAPI/GamingForumAPI.csproj" Id="9574f68b-0522-4280-ab47-f1b5ab7ef715" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/GamingForumApplication/GamingForumApplication.csproj" Id="ef013dfa-f648-4b52-95ee-d7c990f699a6" />
-    <Project Path="src/GamingForumDomain/GamingForumDomain.csproj" Id="590b8a9f-30e5-4a69-adbd-de29d095591a" />
-    <Project Path="src/GamingForumInfrastructure/GamingForumInfrastructure.csproj" Id="8f7e6bfc-5967-47ad-bc9d-ebd76dbabf3f" />
+    <Project Path="src/GamingForumApplication/GamingForum.Application.csproj" Id="ef013dfa-f648-4b52-95ee-d7c990f699a6" />
+    <Project Path="src/GamingForumDomain/GamingForum.Domain.csproj" Id="590b8a9f-30e5-4a69-adbd-de29d095591a" />
+    <Project Path="src/GamingForumInfrastructure/GamingForum.Infrastructure.csproj" Id="8f7e6bfc-5967-47ad-bc9d-ebd76dbabf3f" />
   </Folder>
 </Solution>

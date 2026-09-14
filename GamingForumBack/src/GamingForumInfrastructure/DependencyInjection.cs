@@ -1,5 +1,8 @@
-﻿using GamingForumDomain.Entities.Identity;
+﻿using GamingForumApplication.IRepos.Persistence;
+using GamingForumApplication.Options;
+using GamingForumDomain.Entities.Identity;
 using GamingForumInfrastructure.Context;
+using GamingForumInfrastructure.Implementations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,10 +18,28 @@ namespace GamingForumInfrastructure
 
             services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 
-            services.AddIdentity<AppUser, IdentityRole<Guid>>()
+            services.AddIdentityCore<AppUser>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = true;
+
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+
+                options.SignIn.RequireConfirmedEmail = false;
+
+
+            })
                 .AddRoles<IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<AppDbContext>()
-                .AddDefaultTokenProviders();
+                .AddDefaultTokenProviders()
+                .AddSignInManager();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
 
             return services;
         }
