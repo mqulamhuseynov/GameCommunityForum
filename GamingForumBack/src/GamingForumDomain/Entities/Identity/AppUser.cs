@@ -6,9 +6,6 @@ namespace GamingForumDomain.Entities.Identity
 {
     public class AppUser : IdentityUser<Guid>
     {
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-
         // Forumda gorunen ad. null olanda service UserName-e fallback etsin.
         public string? DisplayName { get; set; }
         public string? AvatarUrl { get; set; }

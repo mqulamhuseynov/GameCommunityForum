@@ -10,8 +10,7 @@ namespace GamingForumInfrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
-            builder.Property(u => u.FirstName).HasMaxLength(100);
-            builder.Property(u => u.LastName).HasMaxLength(100);
+            builder.Property(u => u.UserName).HasMaxLength(100);
             builder.Property(u => u.DisplayName).HasMaxLength(50);
             builder.Property(u => u.AvatarUrl).HasMaxLength(500);
             builder.Property(u => u.Bio).HasMaxLength(1000);
